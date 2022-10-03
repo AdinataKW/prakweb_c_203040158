@@ -46,3 +46,31 @@ function hapus($id)
 
     return mysqli_affected_rows($conn);
 }
+function ubah($data)
+{
+  $conn = koneksi();
+
+  $judul = htmlspecialchars($data["judul"]);
+  $penerbit = htmlspecialchars($data["penerbit"]);
+  $pengarang   = htmlspecialchars($data["pengarang"]);
+  $gambar = htmlspecialchars($data["gambar"]);
+  $gambar = upload();
+  
+  if (!$gambar) {
+    return false;
+  }
+
+  if ($gambar == 'no_photo.png') {
+    $gambar = $gambar_lama;
+  }
+
+  $query = "UPDATE buku SET
+              judul = '$judul',
+              pengarang = '$pengarang',
+              tahun_terbit = '$tahun_terbit',
+              gambar = '$gambar'
+            WHERE id = $id";
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
+  return mysqli_affected_rows($conn);
+}
+?>

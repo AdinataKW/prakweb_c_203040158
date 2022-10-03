@@ -5,8 +5,8 @@ require 'function.php';
 $id = $_GET['id'];
 $buku = query("SELECT * FROM buku WHERE id = $id")[0];
 
-if (isset($_POST['tambah'])) {
-    if (tambah($_POST) > 0) {
+if (isset($_POST['ubah'])) {
+    if (ubah($_POST) > 0) {
         echo "<script>
                     alert('Data Berhasil diubah!');
                     document.location.href = 'index.php';
