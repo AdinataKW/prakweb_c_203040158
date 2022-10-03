@@ -1,0 +1,78 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 03, 2022 at 02:23 PM
+-- Server version: 10.4.16-MariaDB
+-- PHP Version: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `prakweb_c_203040158_pw`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buku`
+--
+
+CREATE TABLE `buku` (
+  `id` int(255) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `penerbit` varchar(255) NOT NULL,
+  `pengarang` varchar(255) NOT NULL,
+  `gambar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `buku`
+--
+
+INSERT INTO `buku` (`id`, `judul`, `penerbit`, `pengarang`, `gambar`) VALUES
+(1, '1.033 ALASAN UNTUK TERSENYUM', 'PT. GRAMEDIA PUSTAKA UTAMA', 'ELIZABETH DUTTON', '1.PNG'),
+(2, '100 FAKTA YANG MENCERDASKAN ANDA', 'XAVIER QUENTIN PRANATA', 'ANDI', '2.PNG'),
+(3, '100 RESEP PUDING FAVORIT', 'RAYYA SORAYA', 'GREAT PUBLISHER', '3.PNG'),
+(4, '100% FOREX : BELAJAR MENGHASILKAN UANG', 'ADMIRAL MARKETS', 'ANGEL DARAZHANOV', '4.PNG'),
+(5, '1001 TIPS SEPUTAR DAPUR ( SEHAT, HEMAT & KREATIF )', 'APHRODITTA M. SHANTY', 'ANDI', '5.PNG'),
+(6, '50 CERITA BINATANG DAN TOKOH LAIN YANG INSPIRATIF', 'PT. GRAMEDIA PUSTAKA UTAMA', 'INDRI NOOR, DKK', '6.PNG'),
+(7, '200 REKOR MENAKJUBKAN BUMI NUSANTARA', 'UFUK PRESS', 'ARI WIDI WIBOWO', '7.PNG'),
+(8, '22 DESAIN KAMAR MANDI MUNGIL', 'PT. GRAMEDIA PUSTAKA UTAMA', 'IMELDA AKMAL ARCHITECTURAL', '8.PNG'),
+(9, '30 DONGENG TERBAIK SEBELUM TIDUR ASLI NUSANTARA', 'IMAM KHOIRI', 'VISIMEDIA', '9.PNG'),
+(10, '30 HARI MENU SEHAT BALITA', 'NINING PRIKASIH & ANTI AP', 'PUSTAKA ANGGREK', '10.PNG'),
+(12, 'dsds', 'ds', 'dsd', '2.png');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `buku`
+--
+ALTER TABLE `buku`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `buku`
+--
+ALTER TABLE `buku`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
